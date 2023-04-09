@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+  function reload() {
+    window.location.reload();
+  }
+</script>
+
+<body class="container">
+
+  <main>
+    <div class="jumbotron">
+      <h1>Welcome to UserData Mock 2000</h1>
+
+      <button class="btn btn-primary" onClick="reload()" style="margin: 10px; padding-left: 20px; padding-right: 20px;">Load</button>
+
+      <div class="container">
+        <% users.forEach(function(user) { %>
+          <div class="container" style="margin: 10px;">
+            <div class="row"> <strong> Name : </strong>
+              <%= user.name %>
+            </div>
+            <div class="row"> <strong> City : </strong>
+              <%= user.city %>
+            </div>
+            <div class="row"> <strong> Company : </strong>
+              <%= user.company %>
+            </div>
+          </div>
+          <% }); %>
+      </div>
+
+
+    </div>
+  </main>
+
+</body>
+
+</html>
